@@ -38,7 +38,7 @@ public class SalesTaxesUnitTest {
     public void testPrintMessage() {	
       SalesTaxes st = new SalesTaxes();
       int result = st.PrintOut();
-      assertEquals(result, 2);   
+      assertEquals(result, 1);   
     }
     
     @After
