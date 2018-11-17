@@ -14,4 +14,9 @@ public class SalesTaxes {
     {
         System.out.println("Pippo");
     }
+    public int PrintOut()
+    {
+        System.out.println("Pippo1");
+        return 1;
+    }
 }
