@@ -26,6 +26,7 @@ public class Item {
         this.isImported = isImported;
         this.isTaxFree = isTaxFree;
         this.price = Math.round(price * 100); // work with cents (long) to avoid dobule's issues
+        taxes = 0L;
     }
 
     public String getDescription() {
