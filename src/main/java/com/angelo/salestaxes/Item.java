@@ -14,10 +14,18 @@ public class Item {
     static public final boolean TAXABLE = false;
     
     public Item(String description, boolean isImported, boolean isTaxFree, double price) {
+        if ( price < 0.01 )
+        {
+            throw new IllegalArgumentException("The price must be a positive number, at least 1 cent");
+        }
+        if ( description.isEmpty() )
+        {
+            throw new IllegalArgumentException("Please provide a description for the item");
+        }
         this.description = description;
         this.isImported = isImported;
         this.isTaxFree = isTaxFree;
-        this.price = Math.round(price * 100); // work with cents to avoid dobule's issues
+        this.price = Math.round(price * 100); // work with cents (long) to avoid dobule's issues
     }
 
     public String getDescription() {
