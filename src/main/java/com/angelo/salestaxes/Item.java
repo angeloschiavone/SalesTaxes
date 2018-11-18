@@ -22,6 +22,11 @@ public class Item {
         {
             throw new IllegalArgumentException("Please provide a description for the item");
         }
+        if ( price > 1000000000000L )
+        {
+            throw new IllegalArgumentException("The item \""+description+"\" is way too expensive!!! Maximum allowed price is 1000000000000");
+        }
+        
         this.description = description;
         this.isImported = isImported;
         this.isTaxFree = isTaxFree;
